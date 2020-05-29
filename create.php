@@ -20,7 +20,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
 
 
     // Validate position
-    $input_position = trim($_POST["position"]);
+    $input_position = $_POST["position"];
     if(empty($input_position)){
         $position_err = 'Please enter a job position.';
     } else{
@@ -29,7 +29,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
 
 
     // Validate gender
-    $input_gender = trim($_POST["gender"]);
+    $input_gender = $_POST["gender"];
     if(empty($input_gender)){
         $gender_err = 'Please enter a gender, male or female or others.';
     } else{
@@ -38,7 +38,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
 
     
     // Validate address
-    $input_address = trim($_POST["address"]);
+    $input_address = $_POST["address"];
     if(empty($input_address)){
         $address_err = 'Please enter an address.';     
     } else{
@@ -47,7 +47,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
 
 
     // Validate salary
-    $input_salary = trim($_POST["salary"]);
+    $input_salary = $_POST["salary"];
     if(empty($input_salary)){
         $salary_err = "Please enter the salary amount.";     
     } elseif(!ctype_digit($input_salary)){

@@ -12,7 +12,7 @@ if(isset($_GET["id"]) && !empty(trim($_GET["id"]))){
         $stmt->bind_param("i", $param_id);
         
         // Set parameters
-        $param_id = trim($_GET["id"]);
+        $param_id = $_GET["id"];
         
         // Attempt to execute the prepared statement
         if($stmt->execute()){

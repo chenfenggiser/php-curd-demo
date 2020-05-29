@@ -4,18 +4,8 @@ This is a demo for a php project to show the read, delete, create and edit featu
 especially the soft delete feature.
 
 
-CRUD is an acronym for Create, Read, Update, and Delete. CRUD operations are basic data manipulation for database. We've already learned how to perform create (i.e. insert), read (i.e. select), update and delete operations in previous chapters. In this tutorial we'll create a simple PHP application to perform all these operations on a MySQL database table at one place.
+The main page will only show the undeleted items, the admin page will show all items, including all soft deleted items.
 
 # Creating the Database Table
-Execute the following SQL query to create a table named employees inside your MySQL database. We will use this table for all of our future operations.
 
-```sh
-
-CREATE TABLE employees (
-    id INT NOT NULL PRIMARY KEY AUTO_INCREMENT,
-    name VARCHAR(100) NOT NULL,
-    address VARCHAR(255) NOT NULL,
-    salary INT(10) NOT NULL
-);
-
-```
+The demo sql file is stored in the project, the name is employees.sql, just import it to your database, like mysql DB, then it will works.
