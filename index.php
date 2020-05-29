@@ -87,6 +87,8 @@
                     // Close connection
                     $mysqli->close();
                     ?>
+
+                    <a href="admin.php" class="btn btn-default">Go to the admin page</a>
                 </div>
             </div>        
         </div>
