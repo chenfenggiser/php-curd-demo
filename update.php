@@ -1,7 +1,7 @@
 <?php
 // Include config file
 require_once 'config.php';
- 
+
 // Define variables and initialize with empty values
 $name = $position = $gender = $address = $salary = "";
 $name_err = $position_err = $gender_err = $address_err = $salary_err = "";
@@ -145,6 +145,9 @@ if(isset($_POST["id"]) && !empty($_POST["id"])){
         exit();
     }
 }
+
+
+
 ?>
  
 <!DOCTYPE html>

@@ -25,6 +25,8 @@ if(isset($_GET["id"]) && !empty(trim($_GET["id"]))){
                 
                 // Retrieve individual field value
                 $name = $row["name"];
+                $position = $row["position"];
+                $gender = $row["gender"];
                 $address = $row["address"];
                 $salary = $row["salary"];
             } else{
@@ -67,17 +69,31 @@ if(isset($_GET["id"]) && !empty(trim($_GET["id"]))){
         <div class="container-fluid">
             <div class="row">
                 <div class="col-md-12">
+
                     <div class="page-header">
                         <h1>View Record</h1>
                     </div>
+
                     <div class="form-group">
                         <label>Name</label>
                         <p class="form-control-static"><?php echo $row["name"]; ?></p>
                     </div>
+
+                    <div class="form-group">
+                        <label>Job Position</label>
+                        <p class="form-control-static"><?php echo $row["position"]; ?></p>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Gender</label>
+                        <p class="form-control-static"><?php echo $row["gender"]; ?></p>
+                    </div>
+
                     <div class="form-group">
                         <label>Address</label>
                         <p class="form-control-static"><?php echo $row["address"]; ?></p>
                     </div>
+
                     <div class="form-group">
                         <label>Salary</label>
                         <p class="form-control-static"><?php echo $row["salary"]; ?></p>

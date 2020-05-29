@@ -124,25 +124,25 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
 
                         <div class="form-group <?php echo (!empty($position_err)) ? 'has-error' : ''; ?>">
                             <label>Job Position</label>
-                            <input type="text" name="position" class="form-control" value="<?php echo $position; ?>">
+                            <input type="text" name="position" class="form-control">
                             <span class="help-block"><?php echo $position_err;?></span>
                         </div>
 
                         <div class="form-group <?php echo (!empty($gender_err)) ? 'has-error' : ''; ?>">
                             <label>Gender</label>
-                            <input type="text" name="gender" class="form-control" value="<?php echo $gender; ?>">
+                            <input type="text" name="gender" class="form-control">
                             <span class="help-block"><?php echo $gender_err;?></span>
                         </div>
 
                         <div class="form-group <?php echo (!empty($address_err)) ? 'has-error' : ''; ?>">
                             <label>Address</label>
-                            <textarea name="address" class="form-control"><?php echo $address; ?></textarea>
+                            <textarea name="address" class="form-control"></textarea>
                             <span class="help-block"><?php echo $address_err;?></span>
                         </div>
 
                         <div class="form-group <?php echo (!empty($salary_err)) ? 'has-error' : ''; ?>">
                             <label>Salary</label>
-                            <input type="text" name="salary" class="form-control" value="<?php echo $salary; ?>">
+                            <input type="text" name="salary" class="form-control" >
                             <span class="help-block"><?php echo $salary_err;?></span>
                         </div>
 
