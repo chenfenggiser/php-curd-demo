@@ -17,6 +17,11 @@
         table tr td:last-child a{
             margin-right: 15px;
         }
+        .grey-trash{
+            color: lightgrey!important;
+            cursor: not-allowed;
+            margin-right: 16px;
+        }
     </style>
     <script type="text/javascript">
         $(document).ready(function(){
@@ -66,7 +71,11 @@
                                             echo "<td>";
                                                 echo "<a href='read.php?id=". $row['id'] ."' title='View Record' data-toggle='tooltip'><span class='glyphicon glyphicon-eye-open'></span></a>";
                                                 echo "<a href='update.php?id=". $row['id'] ."' title='Update Record' data-toggle='tooltip'><span class='glyphicon glyphicon-pencil'></span></a>";
-                                                echo "<a href='delete.php?id=". $row['id'] ."' title='Soft Deleted' data-toggle='tooltip'><span class='glyphicon glyphicon-trash'></span></a>";
+                                                if($row['isDeleted']==='0'){
+                                                    echo "<a href='delete.php?id=". $row['id'] ."' title='Soft Deleted' data-toggle='tooltip'><span class='glyphicon glyphicon-trash'></span></a>";
+                                                } else {
+                                                    echo "<span class='glyphicon glyphicon-trash grey-trash'></span>";
+                                                }
                                                 echo "<a href='hard_delete.php?id=". $row['id'] ."' class='btn btn-danger'>Delete</a>";
                                             echo "</td>";
                                         echo "</tr>";
